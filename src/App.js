@@ -10,6 +10,7 @@ function App() {
   useEffect(()=> {
     axios.get(URL)
       .then((response) => {
+        console.log(response)
         setMessage(response.data.message);
         console.log(message)
         setOrigin(response.data.origin);
