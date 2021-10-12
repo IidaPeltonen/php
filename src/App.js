@@ -11,13 +11,15 @@ function App() {
     axios.get(URL)
       .then((response) => {
         setMessage(response.data.message);
+        console.log(message)
         setOrigin(response.data.origin);
+        console.log(origin)
       }).catch(error => {
         alert(error);
       });
   }, [])
   return (
-    <div className="App">
+    <div>
       <h3>Message from web-server</h3>
       <p>{message}</p>
       <h3>Your address is</h3>
