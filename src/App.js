@@ -10,9 +10,9 @@ function App() {
     axios.get(URL)
       .then((response) => {
         console.log(response)
-        setMessage(response.data[message]);
+        setMessage(response.data.message);
         console.log(message)
-        setOrigin(response.data[origin]);
+        setOrigin(response.data.origin);
         console.log(origin)
       }).catch(error => {
         alert(error);
